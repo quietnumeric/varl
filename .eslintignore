@@ -1,0 +1,3 @@
+/node_modules/
+# ドットで始まるファイルはデフォルトでignoreされるので、それをキャンセルするには!で指定
+!.eslint-local-rules.js

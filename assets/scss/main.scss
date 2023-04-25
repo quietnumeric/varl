@@ -1,0 +1,66 @@
+html {
+  box-sizing: border-box;
+  font-family: Consolas, 'Courier New', Courier, Monaco, monospace;
+  font-size: 14px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  color: #eee;
+  text-align: center;
+  user-select: none;
+  background: #000;
+}
+
+input,
+button,
+textarea,
+select {
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  appearance: none;
+}
+
+::-webkit-scrollbar {
+  width: 18px;
+  height: 18px;
+}
+
+::-webkit-scrollbar-track {
+  background: #555;
+  border-left: solid 1px #555;
+}
+
+::-webkit-scrollbar-corner {
+  background: #555;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 0 2px #666;
+
+  &:active {
+    background: #333;
+  }
+}

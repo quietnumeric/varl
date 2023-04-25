@@ -1,0 +1,67 @@
+root: true
+env:
+  browser: true
+  node: true
+parserOptions:
+  parser: babel-eslint
+extends:
+  - airbnb-base
+  - '@nuxtjs'
+  - plugin:nuxt/recommended
+  - plugin:vue/recommended
+  - plugin:vue-types/strongly-recommended
+  # 以下、pettierは末尾
+  - prettier
+  - plugin:prettier/recommended
+plugins:
+  # - vue
+  - local-rules
+  - import
+  - prettier
+settings:
+  import/resolver: nuxt
+  # package.jsonのdependenciesには記述していないがnode_modulesにある
+  # パッケージをimport * from 'package';したい場合
+  import/core-modules:
+    - vuex
+    - vue
+    - chokidar
+  vue-types/namespace: PropTypes
+rules:
+  local-rules/vue/avoid-using-this: warn
+  no-console: off
+  semi: ['error', 'always']
+  comma-dangle: ['error', 'only-multiline']
+  max-len:
+    [
+      'warn',
+      {
+        'code': 150,
+        'ignoreRegExpLiterals': true,
+        'ignoreComments': true,
+        'ignoreTrailingComments': true,
+        'ignoreStrings': true,
+        'ignoreTemplateLiterals': true,
+      },
+    ]
+  no-unused-vars: warn
+  quotes: ['error', 'single', { 'avoidEscape': true }]
+  no-param-reassign: ['error', { 'props': false }]
+  symbol-description: off
+  import/no-extraneous-dependencies:
+    ['error', { devDependencies: true, optionalDependencies: false }]
+  import/no-unresolved: error
+  func-names: ['error', 'never']
+  import/extensions:
+    ['error', 'ignorePackages', { 'vue': 'never', 'js': 'never' }]
+  vue/eqeqeq: error
+  vue/no-unused-components: 'warn'
+  vue/attribute-hyphenation:
+    [
+      'error',
+      'always',
+      {
+        'ignore':
+          [],
+      },
+    ]

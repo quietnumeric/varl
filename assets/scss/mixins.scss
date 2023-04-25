@@ -1,0 +1,19 @@
+@mixin text-ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// https://gist.github.com/elky/ce230d6fcab055104cdf1a3358037fc7
+@mixin text-ellipsis-depends-on-parent() {
+  display: table;
+  table-layout: fixed;
+  @content; // widthをもらう
+
+  & > * {
+    @include text-ellipsis();
+
+    display: table-cell;
+    width: 100%;
+  }
+}

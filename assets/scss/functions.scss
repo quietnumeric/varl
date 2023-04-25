@@ -1,0 +1,18 @@
+@function transitions($duration, $timing, $props...) {
+  // 空の配列宣言は()
+  $transitions: ();
+
+  @each $prop in $props {
+    $transitions: append(
+      $transitions,
+      $prop $duration $timing,
+      $separator: comma
+    );
+  }
+
+  @return $transitions;
+}
+
+@function ease-outs($duration, $props...) {
+  @return transitions($duration, ease-out, $props...);
+}

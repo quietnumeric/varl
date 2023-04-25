@@ -1,0 +1,27 @@
+@mixin draggable-helper-item-hover($class: draggable-helper-item-hover) {
+  &.#{$class} {
+    @content;
+  }
+}
+
+@mixin draggable-helper-item-active($class: draggable-helper-item-active) {
+  &.#{$class} {
+    @content;
+  }
+}
+
+// 要素がdragされ始めてから
+@mixin draggable-helper-item-dragging() {
+  &:not(.sortable-ghost) {
+    &.sortable-chosen {
+      @content;
+    }
+  }
+}
+
+// ドラッグ中の要素の、リスト内の位置を示すダミー
+@mixin draggable-helper-item-ghost() {
+  &.sortable-ghost {
+    @content;
+  }
+}
