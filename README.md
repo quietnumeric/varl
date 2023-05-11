@@ -2,21 +2,7 @@
 ### GitHub Pages
 https://quietnumeric.github.io/varl/
 ***
-## Build Setup
 
-```bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## 用途
+- 左ペインのテキストエリアに入力された `変数と値` や `keyとvalue` の関係にある文字列を、一旦そのように分解解釈し、中央ペインで選択したフォーマットに応じて再構築し直した結果を右ペインのテキストエリアに出力するツール
+- [Pages](https://quietnumeric.github.io/varl/)右上の `using test source` ボタンを押下することで、テスト用の値が左ペインに展開される
