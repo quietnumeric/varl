@@ -341,6 +341,9 @@ export const Scrollion = () => {
     content.addEventListener('scroll', (event) => {
       scroll(event);
     });
+    content.addEventListener('input', (event) => {
+      scroll(event);
+    });
   };
 
   const mutated = () => {
